@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #E9ECF4;
+    color: #000;
+    padding: 0 16px;
+    font-family:  sans-serif;
+}
+
+
+.contenedor{
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns:  repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+
+    grid-template-areas: "header header sidebar"
+                         "contenido contenido sidebar"
+                         "contenido contenido sidebar"
+                         "widget-1 widget-1 sidebar"
+                         "footer footer footer" 
+               
+}
+
+/* .contenedor >div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer{
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+
+} */
+
+.contenedor .header {
+    /* background: #fAA43D; */
+    color: #0e0e0e;
+    grid-area: header;
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    
+
+}
+.contenedor .contenido{
+    grid-area: contenido;
+    height:  calc(90vh - 155px);
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    /* grid-column: span 2; */
+}
+.contenido textarea{
+    margin-top: 32px;
+    width: 90%;
+    background: transparent;
+    border: none;
+    touch-action: none;
+    resize: none;
+
+    font-weight: 400;
+    font-size: 20px;
+
+
+}
+.contenido textarea:focus-visible{
+    outline: none;
+    /* background-color: red; */
+/*     border: none;
+    -webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none; */
+
+}
+
+.contenedor .sidebar{
+    /* grid-column: 3 / 4; */
+    background: #fAA43D;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: sidebar;
+    min-height: 100px;
+    /* grid-row: 2 /4; */
+}
+.contenedor .widget-1{
+/*     background: #55a8fd ; */
+    color: #fff;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    grid-area: widget-1;
+
+
+}
+
+.widget-1 button{
+    background-color: #0A3871;
+    border: none;
+    color: #fff;
+    padding: 16px 0;
+    width: 320px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.contenedor .footer{
+    background:#12203E ;
+    padding: 16px;
+    color: #fff;
+    grid-area: footer;
+    /* grid-column: span 3; */
+}
+
+
+@media screen and (max-width: 768px) {
+    .contenedor{
+        grid-template-areas: "header header header"
+        "contenido contenido contenido"
+        "widget-1 widget-1 widget-1"
+        "sidebar sidebar sidebar"
+        "footer footer footer" 
+ 
+    }
+}
+@media screen and (max-width: 640px) {
+    .contenedor{
+        grid-template-areas:   "header header header"
+        "contenido contenido contenido"
+        "widget-1 widget-1 widget-1"
+        "sidebar sidebar sidebar"
+        "footer footer footer" ;
+    }
+}
+
+
