@@ -2,31 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="styles.css">
-    <script src="encriptador.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
     <title>Encriptador</title>
+
 </head>
     <body>
         <div class="contenedor">
-            <header class="header">
-                <h2>Header</h2>
+            <header class="header bounce-in-top ">
+              
+                <b class="b2 ">GG</b>
             </header>
-            <main class="contenido">
-                <textarea  rows="16" cols="50" placeholder="Ingrese el texto aqui"></textarea>
+            <main class="contenido fade-in">
+                <textarea  rows="16" cols="50" id="text" pattern="[A-Za-z0-9]" spellcheck="false" autocomplete="off"
+                onkeypress="return ((event.charCode == 32 || event.charCode == 209 || event.charCode == 241 || event.charCode == 13) || (event.charCode >= 48 && event.charCode <= 57 || event.charCode == 46 ) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"
+                 placeholder="Ingrese el texto aquí"></textarea>
             </main>
             <aside class="sidebar">
-                <h3>Sidebar</h3>
+                <textarea  class="hidden" rows="20" cols="50" id="answer" readonly  placeholder=""></textarea>
+                <div class="center"  id="empty"> 
+                    <img class="muneco" src="./Muñeco.png" alt="">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingrese el texto que desees encripta o desencriptar</p>
+                  
+                </div>
+                <button id="copiar" class="hidden"   >Copiar</button>
             </aside>
             <div class="widget-1">
-                <button>Encriptar</button>
-                <button>Desencriptar</button>
+                <button id="encriptar"   >Encriptar <i class="fa fa-circle-o-notch fa-spin" id="loading1"></i> </button>
+                <button  id="desencriptar" class="variant" >Desencriptar  <i class="fa fa-circle-o-notch fa-spin" id="loading2"></i></button>
+            
             </div>
-            <footer class="footer">
-                <h3>FOOTER</h3>
+            <footer class="footer scale-in-hor-left">
+                <h4>by Guillermo Emanuel Navarro García</h4>
+                <p>v1.0.0</p>
             </footer>
         </div>
- 
+        <script src="encriptador.js"></script>
     </body>
 </html>
