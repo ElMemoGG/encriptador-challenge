@@ -81,23 +81,24 @@ b{
 .contenido textarea{
     margin-top: 32px;
     width: 90%;
+    height: auto;
     background: transparent;
     border: none;
-    touch-action: none;
+
     resize: none;
+
+    display: block;
+    box-sizing: padding-box;
+    overflow: hidden;
 
     font-weight: 400;
     font-size: 20px;
+    border: 1px solid red;
 
 
 }
 .contenido textarea:focus-visible{
     outline: none;
-    /* background-color: red; */
-/*     border: none;
-    -webkit-box-shadow: none;
--moz-box-shadow: none;
-box-shadow: none; */
 
 }
 
@@ -149,17 +150,16 @@ box-shadow: none; */
     margin-top: 16px;
 }
 .sidebar textarea{
-
+  
     margin-top: 32px;
     width: 90%;
     background: transparent;
     border: none;
-    touch-action: none;
     resize: none;
 
     font-weight: 400;
     font-size: 20px;
-
+    border: 1px solid red;
 
 }
 .sidebar textarea:focus-visible{
