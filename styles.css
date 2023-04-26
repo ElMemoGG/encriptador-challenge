@@ -156,7 +156,7 @@ b{
     background: transparent;
     border: none;
     resize: none;
-
+    height: auto;
     font-weight: 400;
     font-size: 20px;
 
@@ -317,6 +317,11 @@ box-shadow: none; */
         "widget-1 widget-1 widget-1"
         "sidebar sidebar sidebar"
         "footer footer footer" ;
+    }
+    .contenedor .contenido{
+
+        height:  calc(70vh - 160px);
+
     }
 
     .widget-1 button{
